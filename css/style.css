@@ -95,7 +95,7 @@ header .navbar ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: url(../images/index-bg.jpg) no-repeat;
+  background: url(../images/home-bg.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
