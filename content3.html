@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <h1 class="heading">Content</h1>
+
+        <div id="menu" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="content.html">Content</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- service section starts  -->
+
+    <section class="service">
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-tools"></i>
+                <h3>3.2.1 Serial access (continued)</h3>
+                <p>
+                    When the original magnetic tape (called a <em>master file</em>) needs <em>updating</em>, an additional tape (called a <em>transaction file</em>)
+                    is required. The transaction file contains all the new data to allow the master file
+                    to be updated (although the transaction file is very often another tape, the new
+                    data could in fact be stored on a different medium). The updated tape is referred
+                    to as the new master file. When using tapes, it is essential that the records on both
+                    master file and transaction file are sorted in the same order (for example, sorted by
+                    customer number if it is a billing application - the field used to sort the records is
+                    often referred to as a <em>key field</em>).
+                    This is an example of how a master file (MF) can be updated using a
+                    Transaction File (TF). The scenario here is a book shop that sells books. All of
+                    the books held in stock are stored on the MF in ISBN order-the ISBN acts as
+                    the key field for each record (each different book title will have its own record
+                    made
+                    up of the ISBN, title of book, author, genre, cost price and selling price).
+                    All the changes during the day will be stored on the TF - if a book sells, if new
+                    books come in, if a book is out of print, and so on. At the end of each day, the MF is updated, using
+                    the new data stored on the TF. The basic steps in the update process are shown below:
+                </p>
+                <p>
+                    <ul style="padding-left: 5rem;">
+                        <li style="font-size: 15px;">At the end of the day, the TF is sorted in the same order
+                        as the MF (this will be done using the ISBN which is known here as the key field).</li>
+                        <li style="font-size: 15px;">A new master file (NMF) is created to store the updated records of the books
+                        in the first shop.</li>
+                        <li style="font-size: 15px;">The first record in the TF is then read and the first record in the MF
+                        is also read. </li><ul style="padding-left: 3rem;">
+                            <li style="font-size: 15px;">The two records are compared with each other.</li>
+                            <li style="font-size: 15px;">If the key field on the MF < the key field on the TF, then no transactions
+                            took place and the MF record is written to the NMF; a new MF record is now read.</li>
+                            <li style="font-size: 15px;">If the key field on the MF = the key field on the TF, then a transaction
+                            took place and the new record from the TF is written to the NMF; the next record from both the MF and TF are now read.</li>
+                            <li style="font-size: 15px;">If the transaction file indicates a deletion then the record
+                            is simply not written to the NMF and a new record from each file is read.</li>
+                            <li style="font-size: 15px;">If the key field on the MF is greater than the key field on the TF, then
+                            the record doesn't yet exist and a new record is created on the NMF and the record is written from the TF to
+                            the NMF; a new TF record is now read.</li>
+                        </ul>
+                        <li style="font-size: 15px;">The process is repeated until the end of the MF.</li>
+                        <li style="font-size: 15px;">Finally, any remaining records on the TF are written to the NMF.</li>
+                    </ul>
+                </p>
+
+                <div class="container xlarge">
+                    <div class="pagination">
+                        <ul style="list-style: none; display: inline; padding-left: 0px;">
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content2.html"></a></li>
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content.html"></a></li>
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content2.html"></a></li>
+                            <li class="active" style="list-style: none; display: inline; padding-left: 0px;"><a href="content3.html"></a></li>
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content4.html"></a></li>
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content5.html"></a></li>
+                            <li style="list-style: none; display: inline; padding-left: 0px;"><a href="content4.html"></a></li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- service section ends -->
+
+
+    <div class="footer">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h3>About this website</h3>
+                <p>This website was made as part of an assignment for ICT IGCSE. It is a multi-page website designed
+                    using HTML and CSS. Its purpose is to display and explain information
+                    on the topic of Storage & Media Devices from the IGCSE ICT 2nd edition book, chapter 3.</p>
+            </div>
+
+            <div class="box">
+                <h3>Shortcuts</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="content.html">Content</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact (Email)</h3>
+                <p><a href="mailto:25phananusarn@lannaist.ac.th">25phananusarn@lannaist.ac.th</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
